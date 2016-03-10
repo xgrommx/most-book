@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Rate limiting streams | Introduction</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../../../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../../../content/api/delaying_streams/index.html" />
+    
+    
+    <link rel="prev" href="../../../content/api/awaiting_promises/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.11"
+        data-chapter-title="Rate limiting streams"
+        data-filepath="content/api/rate_limiting_streams/README.md"
+        data-basepath="../../.."
+        data-revision="Thu Mar 10 2016 16:19:31 GMT+0200 (EET)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="content/api/index.html">
+            
+                
+                    <a href="../../../content/api/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Api
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="content/api/creating_streams/index.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Creating streams
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="content/api/creating_streams/of.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/of.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        of, (just)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="content/api/creating_streams/frompromise.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/frompromise.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        fromPromise
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="content/api/creating_streams/from.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/from.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        from
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="content/api/creating_streams/periodic.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/periodic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.4.</b>
+                        
+                        periodic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="content/api/creating_streams/empty.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/empty.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.5.</b>
+                        
+                        empty
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="content/api/creating_streams/never.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/never.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.6.</b>
+                        
+                        never
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="content/api/creating_streams/iterate.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/iterate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.7.</b>
+                        
+                        iterate
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="content/api/creating_streams/unfold.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/unfold.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.8.</b>
+                        
+                        unfold
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="content/api/creating_streams/generate.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/generate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.9.</b>
+                        
+                        generate
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="content/api/creating_streams/fromevent.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/fromevent.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.10.</b>
+                        
+                        fromEvent
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="content/api/creating_streams/create.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/create.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.11.</b>
+                        
+                        create
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="content/api/creating_streams/startwith.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/startwith.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.12.</b>
+                        
+                        startWith
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="content/api/creating_streams/concat.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/concat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.13.</b>
+                        
+                        concat
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="content/api/creating_streams/cycle.html">
+            
+                
+                    <a href="../../../content/api/creating_streams/cycle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.14.</b>
+                        
+                        cycle
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="content/api/handling_errors/index.html">
+            
+                
+                    <a href="../../../content/api/handling_errors/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Handling errors
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="content/api/handling_errors/recoverwith.html">
+            
+                
+                    <a href="../../../content/api/handling_errors/recoverwith.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        recoverWith, (flatMapError)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="content/api/handling_errors/throwerror.html">
+            
+                
+                    <a href="../../../content/api/handling_errors/throwerror.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        throwError
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="content/api/transforming_streams/index.html">
+            
+                
+                    <a href="../../../content/api/transforming_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Transforming streams
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="content/api/filtering_streams/index.html">
+            
+                
+                    <a href="../../../content/api/filtering_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Filtering streams
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="content/api/transducer_support/index.html">
+            
+                
+                    <a href="../../../content/api/transducer_support/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Transducer support
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="content/api/slicing_streams/index.html">
+            
+                
+                    <a href="../../../content/api/slicing_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Slicing streams
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="content/api/looping/index.html">
+            
+                
+                    <a href="../../../content/api/looping/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Looping
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="content/api/combining_streams/index.html">
+            
+                
+                    <a href="../../../content/api/combining_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        Combining streams
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="content/api/combining_higher_order_streams/index.html">
+            
+                
+                    <a href="../../../content/api/combining_higher_order_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        Combining higher order streams
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="content/api/awaiting_promises/index.html">
+            
+                
+                    <a href="../../../content/api/awaiting_promises/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        Awaiting promises
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="content/api/rate_limiting_streams/index.html">
+            
+                
+                    <a href="../../../content/api/rate_limiting_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        Rate limiting streams
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="content/api/delaying_streams/index.html">
+            
+                
+                    <a href="../../../content/api/delaying_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        Delaying streams
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="content/api/sharing_streams/index.html">
+            
+                
+                    <a href="../../../content/api/sharing_streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        Sharing streams
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../" >Introduction</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../../content/api/awaiting_promises/index.html" class="navigation navigation-prev " aria-label="Previous page: Awaiting promises"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../../content/api/delaying_streams/index.html" class="navigation navigation-next " aria-label="Next page: Delaying streams"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../../gitbook/app.js"></script>
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
