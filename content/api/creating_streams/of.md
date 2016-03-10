@@ -1,1 +1,1 @@
-## [`most.of :: T -> Stream<T>`](https://github.com/cujojs/most/blob/master/lib/source/core.js#L19-L21) 
+## [`most.of :: A -> Stream<A>`](https://github.com/cujojs/most/blob/master/lib/source/core.js#L19-L21) 
