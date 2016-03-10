@@ -25,7 +25,7 @@
       * [scan](content/api/transforming_streams/scan.md)
       * [chain](content/api/transforming_streams/chain.md)
       * [continueWith](content/api/transforming_streams/continuewith.md)
-      * [concatMap](content/api/transforming_streams/concatMap.md)
+      * [concatMap](content/api/transforming_streams/concatmap.md)
       * [ap](content/api/transforming_streams/ap.md)
       * [timestamp](content/api/transforming_streams/timestamp.md)
       * [tap](content/api/transforming_streams/tap.md)
