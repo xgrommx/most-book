@@ -1,6 +1,4 @@
 {
-    "plugins": [
-        "video"
-    ],
+    "plugins": [],
     "pluginsConfig": {}
 }
