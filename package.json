@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "serve": "gitbook serve",
+    "gitbook-install": "gitbook install", 
     "build": "gitbook build",
-    "deploy": "npm run build; gh-pages -d _book"
+    "deploy": "npm run gitbook-install; npm run build; gh-pages -d _book"
   },
   "author": "",
   "license": "ISC",
