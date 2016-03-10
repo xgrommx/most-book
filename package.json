@@ -1,0 +1,17 @@
+{
+  "name": "most-book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build",
+    "deploy": "gh-pages -d _book"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^0.11.0",
+    "gitbook-cli": "^2.1.2"
+  }
+}
