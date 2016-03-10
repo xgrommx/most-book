@@ -1,7 +1,7 @@
 {
-  "styles": {
-    "website": "styles/website.css"
-  },
-  "plugins": [],
-  "pluginsConfig": {}
+    "plugins": [
+        "toggle-chapters",
+        "splitter"
+    ],
+    "pluginsConfig": {}
 }
