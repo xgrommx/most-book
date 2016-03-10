@@ -20,6 +20,7 @@
         * [recoverWith, (flatMapError)](content/api/handling_errors/recoverwith.md)
         * [throwError](content/api/handling_errors/throwerror.md)
     * [Transforming streams](content/api/transforming_streams/README.md)
+      * [map](content/api/transforming_streams/map.md)
     * [Filtering streams](content/api/filtering_streams/README.md)
     * [Transducer support](content/api/transducer_support/README.md)
     * [Slicing streams](content/api/slicing_streams/README.md)
