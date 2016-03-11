@@ -8,7 +8,7 @@ Returns an stream that contains a constant element `a`.
 #### Returns
   * `(Stream)` : A stream with the constant element with type `a`.
 
-#### Notation {% sup %}[see about](){% endsup %}
+#### Notation <sup>[*]()</sup>
   * `most.of(x): x|`
 
 #### `Example`
