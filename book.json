@@ -1,7 +1,8 @@
 {
     "plugins": [
         "toggle-chapters",
-        "splitter"
+        "splitter",
+        "jsbin"
     ],
     "pluginsConfig": {}
 }
