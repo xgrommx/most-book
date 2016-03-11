@@ -2,7 +2,8 @@
     "plugins": [
         "toggle-chapters",
         "splitter",
-        "jsbin"
+        "jsbin",
+        "superscript"
     ],
     "pluginsConfig": {}
 }
