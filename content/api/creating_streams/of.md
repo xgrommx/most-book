@@ -3,10 +3,10 @@
 Returns an stream that contains a constant element with a type `a`.
 
 #### Arguments
-  * `(a)` : A constant in the resulting of stream.
+  * `(a)` : A constant to be emitted by the resulting stream.
 
 #### Returns
-  * `(Stream)` : A stream with the constant element with type `a`.
+  * `(Stream)` : A stream that will emit the specified constant and then terminate.
 
 #### Notation <sup>[*]()</sup>
   * `most.of(x): x|`
